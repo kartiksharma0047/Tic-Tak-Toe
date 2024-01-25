@@ -1,0 +1,1070 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Page 1 CSS */
+.Page1 {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    overflow: hidden;
+}
+
+.TitleHeading {
+    display: flex;
+    color: #222;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    margin: 5rem auto 0 auto;
+    font-size: 6rem;
+    position: relative;
+}
+
+.GradientH1 {
+    height: max-content;
+    word-spacing: 37px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.GradientH1::before {
+    content: attr(data-text);
+    color: #0e3742;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0px;
+}
+
+.TubeLightGlow {
+    margin-top: 0.23em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: 0.7em;
+    outline: none;
+    animation: TubeLightGlow 3s linear infinite;
+}
+
+@keyframes TubeLightGlow {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+}
+
+.GradientH1Animate::before {
+    animation: HeadingText 2s linear forwards;
+}
+
+.no-border {
+    color: #fff;
+    border-right: none !important;
+}
+
+@keyframes HeadingText {
+    0% {
+        border-right: 4px solid #fff;
+        width: 0px;
+    }
+
+    100% {
+        border-right: 4px solid #fff;
+        width: 100%;
+    }
+}
+
+.hideBorder {
+    border-right: none !important;
+}
+
+.TitleHeading div {
+    position: relative;
+}
+
+.tic {
+    left: -1000px;
+}
+
+.ticAnimation {
+    animation: ticSide 1s forwards 0.2s ease-out;
+}
+
+@keyframes ticSide {
+    80% {
+        left: 50px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.tak {
+    top: -360px;
+    transform: translateX(50%, 50%);
+}
+
+.takAnimation {
+    animation: takSide 1s forwards 1.8s ease-out;
+}
+
+@keyframes takSide {
+    80% {
+        top: 50px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+.toe {
+    right: -1000px;
+}
+
+.toeAnimation {
+    animation: toeSide 1s forwards 3s ease-out;
+}
+
+@keyframes toeSide {
+    80% {
+        right: 50px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+.BouncyBall {
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    margin: auto;
+    margin-top: 20rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ball {
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+    left: 120px;
+}
+
+.ballBtn {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.ballBtn:hover {
+    transform: scale(1.3);
+}
+
+.BounceAnimation {
+    animation: bounce 1.4s 3;
+}
+
+.CenterAnimation {
+    animation: center 1s forwards;
+}
+
+@keyframes center {
+    100% {
+        top: 120px;
+    }
+}
+
+.fa-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: black;
+}
+
+@keyframes bounce {
+    10% {
+        height: 60px;
+        width: 60px;
+    }
+
+    30% {
+        height: 60px;
+        width: 50px;
+    }
+
+    50% {
+        height: 40px;
+        width: 67px;
+        transform: translateY(240px);
+    }
+
+    75% {
+        height: 60px;
+        width: 67px;
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.container {
+    width: 67px;
+    height: 60px;
+}
+
+.shadow {
+    background-color: rgba(221, 221, 221, 0.2);
+    height: 20px;
+    width: 75px;
+    border-radius: 50%;
+    position: relative;
+    top: 215px;
+    left: 113px;
+}
+
+.shadowAnimation {
+    animation: shrink 1.4s 3;
+}
+
+@keyframes shrink {
+    50% {
+        transform: scaleX(0.5);
+    }
+}
+
+.shadowHide {
+    animation: hideShadow 1s forwards;
+}
+
+@keyframes hideShadow {
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+/* Page1 Media Queries */
+@media screen and (max-width:1100px) {
+    .TitleHeading {
+        width: 780px;
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .TitleHeading {
+        width: 511px;
+        font-size: 2.5rem;
+        margin-top: 15rem;
+    }
+
+    .ball {
+        height: 50px;
+        width: 50px;
+    }
+
+    .fa-play {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .TitleHeading {
+        width: 320px;
+        font-size: 1.4rem;
+        margin-top: 15rem;
+    }
+
+    .BouncyBall {
+        margin-top: 15rem;
+    }
+
+    .ball {
+        height: 40px;
+        width: 40px;
+    }
+
+    .fa-play {
+        font-size: 20px;
+    }
+}
+
+/* Page2 CSS */
+.Page2 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0c192c;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+.Contrast {
+    filter: contrast(2);
+}
+
+.bubbles span {
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    border-radius: 50%;
+    margin: 0 4px;
+    box-shadow: 0 0 0 1px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: bubbleUp 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 1px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+}
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.GameContainer {
+    color: white;
+    position: relative;
+    width: 90vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+.GamePlayer {
+    text-align: center;
+}
+
+.GamePlayer h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.LeftPlayerBlink {
+    animation: PlayerTubeLight 2s linear forwards;
+}
+
+.RightPlayerBlink {
+    animation: PlayerTubeLight 2s linear forwards;
+}
+
+@keyframes PlayerTubeLight {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: rgb(8, 8, 8);
+        text-shadow: none;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #ffffff,
+            0 0 20px #ffffff,
+            0 0 40px #ffffff,
+            0 0 80px #ffffff,
+            0 0 160px #ffffff;
+    }
+}
+
+.option {
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PlayerLeft {
+    background: repeating-conic-gradient(from var(--a), #fe0000 0%, #fe0000 5%, transparent 5%, transparent 40%, #fe0000 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes PlayerLeftBox {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.PlayerLeft::after {
+    height: 240px;
+    width: 240px;
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #0c192c;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #ff2d75, 0 0 40px #ff2d75, 0 0 100px #ff2d75;
+    z-index: 2;
+}
+
+.PlayerRight {
+    background: repeating-conic-gradient(from var(--b), #00d0ff 0%, #00d0ff 5%, transparent 5%, transparent 40%, #00d0ff 50%);
+    animation: PlayerRightBox 4s linear infinite;
+}
+
+@property --b {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes PlayerRightBox {
+    0% {
+        --b: 0deg;
+    }
+
+    100% {
+        --b: 360deg;
+    }
+}
+
+.PlayerRight::after {
+    height: 240px;
+    width: 240px;
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #0c192c;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0 0 10px #4fc3dc, 0 0 40px #4fc3dc, 0 0 100px #4fc3dc;
+    z-index: 2;
+}
+
+.option h1 {
+    font-size: 15rem;
+    position: absolute;
+    z-index: 3;
+}
+
+.TubeLightLeftBlink {
+    animation: TextLeftGlow 0.4s linear infinite;
+}
+
+.TubeLightRightBlink {
+    animation: TextRightGlow 0.4s linear infinite;
+}
+
+@keyframes TextLeftGlow {
+    0% {
+        color: rgb(8, 8, 8);
+    }
+
+    50% {
+        color: #fff;
+        text-shadow: 0 0 10px #ff2d75,
+            0 0 20px #ff2d75,
+            0 0 40px #ff2d75,
+            0 0 80px #ff2d75,
+            0 0 160px #ff2d75;
+    }
+
+    100% {
+        color: rgb(8, 8, 8);
+    }
+}
+
+@keyframes TextRightGlow {
+    0% {
+        color: rgb(8, 8, 8);
+    }
+
+    50% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+
+    100% {
+        color: rgb(8, 8, 8);
+    }
+}
+
+.Board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.BoardLine {
+    position: relative;
+    height: 190px;
+    width: 570px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.BoardLightRed {
+    background: repeating-conic-gradient(from var(--a), #ff2d75 0%, #ff2d75 5%, transparent 5%, transparent 40%, #ff2d75 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+}
+
+.BoardLightRed::after {
+    height: 590px;
+    width: 590px;
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #0c192c;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.BoardLightRed::before {
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    background: repeating-conic-gradient(from var(--a), #ff2d75 0%, #ff2d75 5%, transparent 5%, transparent 40%, #ff2d75 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 15px;
+    top: 0px;
+    left: 0px;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.BoardLightBlue {
+    background: repeating-conic-gradient(from var(--a), #03bcf4 0%, #03bcf4 5%, transparent 5%, transparent 40%, #03bcf4 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+}
+
+.BoardLightBlue::after {
+    height: 590px;
+    width: 590px;
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #0c192c;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.BoardLightBlue::before {
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    background: repeating-conic-gradient(from var(--a), #03bcf4 0%, #03bcf4 5%, transparent 5%, transparent 40%, #03bcf4 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 15px;
+    top: 0px;
+    left: 0px;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.BoardBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    background-color: #0c192c;
+    font-size: 10rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.BoardBox:hover {
+    transform: scale(1.05);
+}
+
+.BoardBox:active {
+    transform: scale(0.6);
+}
+
+.RedBox {
+    animation: redbox 1s linear infinite;
+}
+
+@keyframes redbox {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #ff2d75,
+            0 0 10px #ff2d75,
+            0 0 20px #ff2d75;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.BlueBox {
+    animation: bluebox 1s linear infinite;
+}
+
+@keyframes bluebox {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #03bcf4,
+            0 0 10px #03bcf4,
+            0 0 20px #03bcf4;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.BlueWinBoxBackground div {
+    animation: BackgroundBlue 1s linear infinite;
+}
+
+@keyframes BackgroundBlue {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #03bcf4,
+            0 0 10px #03bcf4,
+            0 0 20px #03bcf4;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.RedWinBoxBackground div {
+    animation: BackgroundRed 1s linear infinite;
+}
+
+@keyframes BackgroundRed {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #ff2d75,
+            0 0 10px #ff2d75,
+            0 0 20px #ff2d75;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.RedText {
+    animation: redLightText 1s linear infinite;
+}
+
+@keyframes redLightText {
+    0% {
+        text-shadow: none;
+    }
+
+    50% {
+        text-shadow: 0 0 5px #ff2d75,
+            0 0 10px #ff2d75,
+            0 0 20px #ff2d75;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+.BlueText {
+    animation: BlueLightText 1s linear infinite;
+}
+
+@keyframes BlueLightText {
+    0% {
+        text-shadow: none;
+    }
+
+    50% {
+        text-shadow: 0 0 5px #03bcf4,
+            0 0 10px #03bcf4,
+            0 0 20px #03bcf4;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}
+
+.WinBoxBlue {
+    animation: TextWinBlue 1s linear infinite !important;
+}
+
+.WinBoxRed {
+    animation: TextWinRed 1s linear infinite !important;
+}
+
+@keyframes TextWinRed {
+    0% {
+        color: rgb(8, 8, 8);
+    }
+
+    50% {
+        color: #fff;
+        text-shadow: 0 0 10px #ff2d75,
+            0 0 20px #ff2d75,
+            0 0 40px #ff2d75,
+            0 0 80px #ff2d75,
+            0 0 160px #ff2d75;
+        box-shadow: 0 0 5px #ff2d75,
+            0 0 10px #ff2d75,
+            0 0 20px #ff2d75;
+    }
+
+    100% {
+        color: rgb(8, 8, 8);
+    }
+}
+
+@keyframes TextWinBlue {
+    0% {
+        color: rgb(8, 8, 8);
+    }
+
+    50% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+        box-shadow: 0 0 5px #03bcf4,
+            0 0 10px #03bcf4,
+            0 0 20px #03bcf4;
+    }
+
+    100% {
+        color: rgb(8, 8, 8);
+    }
+}
+
+.BoardLightDraw {
+    background: repeating-conic-gradient(from var(--a), #00ec00 0%, #00ec00 5%, transparent 5%, transparent 40%, #00ec00 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+}
+
+.BoardLightDraw::after {
+    height: 590px;
+    width: 590px;
+    content: "";
+    position: absolute;
+    inset: 8px;
+    background-color: #0c192c;
+    border-radius: 15px;
+    top: 5px;
+    left: 5px;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.BoardLightDraw::before {
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 600px;
+    background: repeating-conic-gradient(from var(--a), #00ec00 0%, #00ec00 5%, transparent 5%, transparent 40%, #00ec00 50%);
+    animation: PlayerLeftBox 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 15px;
+    top: 0px;
+    left: 0px;
+    bottom: 5px;
+    right: 5px;
+    z-index: 2;
+}
+
+.DrawBoxBackground div {
+    animation: BackgroundDraw 1s linear infinite;
+}
+
+@keyframes BackgroundDraw {
+    0% {
+        box-shadow: none;
+    }
+
+    50% {
+        box-shadow: 0 0 5px #00ec00,
+            0 0 10px #00ec00,
+            0 0 20px #00ec00;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.EndPopUp {
+    position: absolute;
+    z-index: 4;
+    width: 400px;
+    height: 400px;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: none !important;
+}
+.EndPopUp Div{
+    text-align: center;
+}
+.PopUpAnimation{
+    animation: Popped 1s linear forwards !important;
+}
+@keyframes Popped{
+    0%{
+        transform: scale(0.01 );
+    }
+    80%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.RedPopUp {
+    animation: RedPopUp 2s linear infinite !important;
+}
+
+@keyframes RedPopUp {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #fe0000;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #ff2d75,
+            0 0 20px #ff2d75,
+            0 0 40px #ff2d75,
+            0 0 80px #ff2d75,
+            0 0 160px #ff2d75;
+    }
+}
+
+.BluePopUp {
+    animation: BluePopUp 2s linear infinite !important;
+}
+
+@keyframes BluePopUp {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #03bcf4;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+            0 0 20px #03bcf4,
+            0 0 40px #03bcf4,
+            0 0 80px #03bcf4,
+            0 0 160px #03bcf4;
+    }
+}
+
+.DrawPopUp {
+    animation: DrawPopUp 2s linear infinite !important;
+}
+
+@keyframes DrawPopUp {
+
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #00ec00;
+    }
+
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #00ec00,
+            0 0 20px #00ec00,
+            0 0 40px #00ec00,
+            0 0 80px #00ec00,
+            0 0 160px #00ec00;
+    }
+}
+
+.hidden {
+    display: none;
+}
